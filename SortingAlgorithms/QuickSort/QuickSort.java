@@ -1,4 +1,4 @@
-package QuickSort;
+package SortingAlgorithms.QuickSort;
 
 /*
 Time Complexity	 

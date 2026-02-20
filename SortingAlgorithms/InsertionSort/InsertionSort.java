@@ -1,4 +1,4 @@
-package InsertionSort;
+package SortingAlgorithms.InsertionSort;
 /*
 
 L'insertion sort viene utilizzato quando:

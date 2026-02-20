@@ -1,4 +1,4 @@
-package MergeSort;
+package SortingAlgorithms.MergeSort;
 public class MergeSort {
     public static void main(String[] args) {
         // Esempio di utilizzo del Merge Sort su una lista collegata
