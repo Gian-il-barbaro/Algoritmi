@@ -16,14 +16,16 @@ public class QuickSort{
         int[] arr = {9, 5, 1, 4, 3};
         int n = arr.length;
 
-        QuickSort quickSort = new QuickSort();
-        quickSort.quickSort(arr, 0, n - 1);
+        System.out.println("Original array: ");
+        printArray(arr);
+        quickSort(arr, 0, n - 1);
 
         System.out.println("Sorted array: ");
-        quickSort.printArray(arr);
+        quickSort(arr, n, n);
+        printArray(arr);
     }
 
-    private void quickSort(int[] arr, int leftmost, int rightmost) {
+    private static void quickSort(int[] arr, int leftmost, int rightmost) {
         if (leftmost < rightmost) {
             int pivot = partition(arr, leftmost, rightmost);
 
@@ -32,7 +34,7 @@ public class QuickSort{
         }
 
     }
-    private int partition(int[] arr, int leftmost, int rightmost){
+    private static int partition(int[] arr, int leftmost, int rightmost){
         int pivot = arr[rightmost];
         int index = leftmost;
 
@@ -47,13 +49,13 @@ public class QuickSort{
     }
 
 
-    private void swap(int[] arr, int i, int j) {
+    private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
-    private void printArray(int[] arr) {
+    private static void printArray(int[] arr) {
         for (int i : arr) {
             System.out.print(i + " ");
         }
