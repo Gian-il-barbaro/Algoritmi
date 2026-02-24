@@ -5,8 +5,8 @@ struct Node {
     int data;
     struct Node* next;
 };
-// Variabile globale per il top dello stack
-struct Node *top;
+// Variabile globale per il top dello stack inizializzata a NULL indica che lo stack è vuoto
+struct Node *top = NULL;
 
 //funzione push per inserire un elemento nello stack
 void push(int value) {
@@ -49,7 +49,7 @@ void printStack() {
 }
 
 int main() {
-
+    pop(); // Prova a pop da uno stack vuoto
     push(10);
     push(20);
     push(30);
