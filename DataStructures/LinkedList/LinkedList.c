@@ -31,7 +31,7 @@ void insertAfterValue(int key, int new_data) {
 
     struct Node* new_node = malloc(sizeof(struct Node));
     new_node->data = new_data;
-    
+
     //new_node si prende il next del nodo corrente
     new_node->next = current->next;
     //current punta a new_node
@@ -80,14 +80,17 @@ void deleteNode(int key) {
 }
 
 // cerca un nodo
-int searchNode(int key) {
+void searchNode(int key) {
     struct Node* current = head;
 
     while (current != NULL) {
-        if (current->data == key) return 1;
-            current = current->next;    
+        if (current->data == key) {
+            printf("\n%d Trovato", key);
+            return;
         }
-    return 0;
+        current = current->next;    
+        }
+    printf("\n%d non trovato", key);
 }
 
 // sort della lista
@@ -135,18 +138,12 @@ int main() {
   printf("Linked list: ");
   printList();
 
-  printf("\nAfter deleting an element: ");
+  printf("\nDopo avere eliminato: ");
   deleteNode(3);
   printList();
 
-  int item_to_find = 3;
-  if (searchNode(item_to_find)) {
-  printf("\n%d is found", item_to_find);
-  } else {
-  printf("\n%d is not found", item_to_find);
-  }
-
+  searchNode(3);
   sortLinkedList();
-  printf("\nSorted List: ");
+  printf("\nLista ordinata: ");
   printList();
 }
